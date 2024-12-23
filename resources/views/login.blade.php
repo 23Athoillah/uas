@@ -39,7 +39,7 @@
                                         @endif
                                         <div class="mb-3">
 											<label for="username" class="form-label text-muted">Username<span class="text-danger">*</span></label>
-											<input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
+											<input type="text" class="form-control" name="name" id="username" placeholder="Enter your username">
 										</div>
 										<div class="mb-3">
 											<label for="password" class="form-label text-muted">Password<span class="text-danger">*</span></label>

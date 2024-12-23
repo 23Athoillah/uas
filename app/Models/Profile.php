@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jurusan extends Model
+class Profile extends Model
 {
     use HasFactory;
-
-    protected $table = 'jurusan';
+     
+    protected $table = 'profiles';
     protected $fillable = [
-       'jurusan_name',
-       'jurusan_prodi',
-         'jurusan_bidstudi',
+        'name',
+        'description',
+        'image',
     ];
+
 }

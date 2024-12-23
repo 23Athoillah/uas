@@ -19,7 +19,7 @@ class loginController extends Controller
 
     public function processLogin(Request $request)
     {
-        if (Auth::attempt($request->only('username','password')))
+        if (Auth::attempt($request->only('name','password')))
         {
             return redirect(route('dashboard'));
         }

@@ -72,7 +72,7 @@
                 <span class="link-title">Prestasi</span>
             </a>
         </li>
-        <li class="nav-item ">
+        <!-- <li class="nav-item ">
             <a href="#" class="nav-link">
                 <i class="link-icon" data-feather="file-text"></i>
                 <span class="link-title">Dokumen</span>
@@ -83,8 +83,8 @@
                 <i class="link-icon" data-feather="printer"></i>
                 <span class="link-title">Bukti Daftar</span>
             </a>
-        </li>
-        <li class="nav-item ">
+        </li> -->
+        <!-- <li class="nav-item ">
             <a href="#" class="nav-link">
                 <i class="link-icon" data-feather="message-circle"></i>
                 <span class="link-title">Status Lulus</span>
@@ -96,6 +96,6 @@
                 <i class="link-icon" data-feather="settings"></i>
                 <span class="link-title">Akun</span>
             </a>
-        </li>
+        </li> -->
     @endif
 </ul>

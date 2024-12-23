@@ -7,6 +7,7 @@ use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,7 @@ Route::post('/processLogin',[LoginController::class, 'processLogin'])->name('pro
 Route::get('/processLogout',[LoginController::class, 'processLogout'])->name('processLogout');
 Route::get('/register',[RegisterController::class,'showRegister'])->name('register');
 Route::post('/processRegister',[RegisterController::class,'processRegister'])->name('processRegister');
+Route::get('/profile',[ProfileController::class, 'index'])->name('index');
 
 Route::group(['middleware' => ['auth','level:1,2,3']], function (){
     Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');

@@ -10,4 +10,9 @@ class Prestasi extends Model
     use HasFactory;
 
     protected $table = 'prestasi';
+
+    function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

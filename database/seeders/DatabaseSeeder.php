@@ -44,5 +44,12 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(60),
             'created_at' => now()
         ]);
+
+        $this->call([
+            BiodataSeeder::class,
+            JurusanSeeder::class,
+            NilaiSeeder::class,
+            PostNilaiSeeder::class,
+        ]);
     }
 }

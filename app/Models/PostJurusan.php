@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PostJurusan extends Model
 {
     use HasFactory;
+    protected $table = 'post_jurusan';
 
     protected $fillable = [
         'user_id',

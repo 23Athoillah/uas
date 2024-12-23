@@ -23,6 +23,56 @@ class BiodataResource extends Resource
     {
         return $form
             ->schema([
+                forms\Components\TextInput::make('user_id')
+                    ->required()
+                    ->maxLength(255),
+                    
+                Forms\Components\TextInput::make('nama_lengkap')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('nik')
+                    ->required()
+                    ->maxLength(50),
+                Forms\Components\TextInput::make('tempat_lahir')
+                    ->required()
+                    ->maxLength(50),
+                Forms\Components\DatePicker::make('tgl_lahir')
+                    ->required(),
+                Forms\Components\Select::make('jenis_kelamin')
+                    ->options([
+                        'Laki-laki' => 'Laki-laki',
+                        'Perempuan' => 'Perempuan',
+                    ])
+                    ->required(),
+                Forms\Components\TextInput::make('agama')
+                    ->required()
+                    ->maxLength(50),
+                Forms\Components\TextInput::make('alamat_lengkap')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Select::make('jalur_tes')
+                    ->label('Jalur Tes')
+                    ->options([
+                        'Reguler' => 'Reguler',
+                        'Beasiswa' => 'Beasiswa',
+                    ])
+                    ->required(),
+                Forms\Components\Select::make('konfirmasi')
+                    ->label('Konfirmasi')
+                    ->options([
+                        'Ya' => 'Ya',
+                        'Tidak' => 'Tidak',
+                    ])
+                    ->required(),
+                Forms\Components\Select::make('status')
+                    ->label('Status')
+                    ->options([
+                        'Aktif' => 'Aktif',
+                        'Non-Aktif' => 'Non-Aktif',
+                    ])
+                    ->required(),
+
+                    forms\Components\FileUpload::make('img_user')
                 
             ]);
     }
@@ -31,6 +81,8 @@ class BiodataResource extends Resource
     {
         return $table
         ->columns([
+            Tables\Columns\ImageColumn::make('img_user')->label('Image'),
+            Tables\Columns\TextColumn::make('id')->label('ID'),
             Tables\Columns\TextColumn::make('user.name')->label('Nama User')->searchable(),
             Tables\Columns\TextColumn::make('nama_lengkap')->limit(50),
             Tables\Columns\TextColumn::make('nik')->limit(50),

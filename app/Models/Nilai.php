@@ -9,8 +9,15 @@ class Nilai extends Model
 {
     use HasFactory;
 
+    protected $table = 'nilai';
+
     protected $fillable = [
         'nilai_name',
         'nilai_kkm',
     ];
+
+    public function postNilai()
+    {
+        return $this->hasMany(PostNilai::class);
+    }
 }
